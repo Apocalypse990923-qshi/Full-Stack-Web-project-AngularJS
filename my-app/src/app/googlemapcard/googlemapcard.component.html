@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+	<div mat-dialog-content>
+		<google-map height="500px" width="500px"  [options]="mapOptions">
+			<map-marker [position]="marker.position"></map-marker>
+		</google-map>
+	</div>
+	<div mat-dialog-actions>
+		<button mat-button mat-dialog-close>Close</button>
+	</div>

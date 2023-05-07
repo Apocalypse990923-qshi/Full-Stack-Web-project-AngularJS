@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+}
+div.search_area {
+	margin: 50px auto auto auto;
+	border-radius:15px;
+	background-color: rgba(150, 150, 150, 0.4);
+	-webkit-backdrop-filter: blur(5px);
+ 	backdrop-filter: blur(5px);
+}
+div.search_heading {
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin: auto;
+	width: 100%;
+	border-bottom: 1px solid white;
+    text-align: center;
+}
+h1.search_title {
+	color: white;
+	font-family: "Georgia";
+	font-size: 35pt;
+}
+table.search_table {
+	font-size: 15pt;
+	line-height: 40px;
+	margin: 20px auto 30px auto;
+	height: 200px;
+	width: 100%;
+}
+td.search_input {
+	text-align: left;
+}
+#keyword {
+	width: 100%;
+}
+#location {
+	width: 100%;
+}
+#category {
+	width: 100%;
+}
+.autocomplete-panel {
+	color:white;
+	position: relative;
+    z-index: 1000;
+}
+label {
+	color: #99CCFF;
+}
+label.required:after {
+	content: '*';
+	color: red;
+}
+div.button_area {
+	width: inline;
+	height: 75px;
+	margin: auto;
+	text-align: left;
+}
+button.button{
+	color: white;
+	width: 100px;
+	border-width: 0px;
+	text-align: center;
+	font-size: 15pt;
+	width: 50%;
+	height:50px;
+	border-radius: 10px;
+}
+button.btn:hover{
+	-webkit-filter: brightness(80%);
+}
+
+div.cdk-overlay-container {
+	/* position: fixed; */
+	z-index: 1000;
+}

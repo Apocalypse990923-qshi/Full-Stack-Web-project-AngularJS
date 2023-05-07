@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  font-size: 15pt;
+  color: white;
+  text-decoration: none;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+.nav-link.active {
+  border-color: white;
+}

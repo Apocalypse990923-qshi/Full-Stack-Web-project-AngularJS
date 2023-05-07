@@ -1,0 +1,46 @@
+*{
+    margin: auto;
+}
+
+div.results_card {
+    /*background-color: #242424;*/
+    /*border-radius:15px;*/
+}
+table.search_table {
+    text-align: center;
+	border-collapse: separate;
+  	border-spacing: 0;
+  	border-radius: 15px;
+  	overflow: hidden;
+}
+table.search_table td,th{
+    color:white;
+    border: none;
+}
+img.icon {
+    width: 100px;
+    height: 100px;
+}
+.table-striped thead tr {
+    background-color: #242424;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #3E3E3E; /* Change the light gray color for odd rows */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #242424; /* Change the slightly darker gray color for even rows */
+}
+tr.item:hover{
+	cursor: pointer;
+}
+
+.table tr:first-child {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.table tr:last-child {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}

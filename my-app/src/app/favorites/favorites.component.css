@@ -1,0 +1,27 @@
+div.favorite_card {
+    /*background-color:white;
+    border-radius:15px;*/
+}
+i.fa-trash-o:hover {
+	cursor: pointer;
+}
+.table {
+	border-collapse: separate;
+  	border-spacing: 0;
+  	border-radius: 15px;
+  	overflow: hidden;
+}
+.table thead tr{
+	background-color:white;
+}
+.table tbody tr{
+	background-color:white;
+}
+.table tr:first-child {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.table tr:last-child {
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}

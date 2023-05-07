@@ -1,0 +1,70 @@
+<!--<div class="content">-->
+<div class="container" style="margin: auto;">
+	<div style="margin-bottom: 40px;">
+	<form id="search_form" method="GET" [formGroup]="signupForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+	<div class="search_area col-12 col-md-6" style="padding-top: 20px;padding-bottom: 40px;">
+		<div class="row">
+			<div class="search_heading" style="width:95%;"><h1 class="search_title">Events Search</h1></div>
+		</div>
+
+
+		<div class="row" style="padding-top: 15px;">
+			<div class="col-12">
+				<label for="keyword" class="required form-label">Keyword</label><br>
+				<input matInput [matAutocomplete]="auto" class="text form-control"
+				formControlName="keyword" name="keyword"
+				type="text" id="keyword" required>
+					<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayWith">
+						<mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
+						<ng-container *ngIf="!isLoading">
+							<mat-option class="autocomplete-panel" *ngFor="let keywords of filteredKeywords" [value]="keywords">
+								<span><b>{{keywords}}</b></span>
+							</mat-option>
+						</ng-container>
+					</mat-autocomplete>
+			</div>
+		</div>
+
+		<div class="row" style="padding-top: 15px;">
+			<div class="col-12 col-md-6">
+				<div>
+					<label for="distance">Distance(miles)</label><br>
+					<input class="text form-control" formControlName="distance" name="distance" type="number" placeholder="10" id="distance">
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div style="margin-right: 20%">
+					<label for="category" class="required">Category</label><br>
+					<select formControlName="category" class="form-select form-control" name="category" id="category">
+					<option value ="Default" SELECTED>Default</option>
+					<option value ="Music">Music</option>
+					<option value ="Sports">Sports</option>
+					<option value ="Arts & Theatre">Arts & Theatre</option>
+					<option value ="Film">Film</option>
+					<option value ="Miscellaneous">Miscellaneous</option></select>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row" style="padding-top: 15px;">
+			<div class="col-12">
+				<label for="location" class="required">Location</label>
+				<input class="text form-control" [disabled]="clearlocation" formControlName="location" name="location" id="location" type="text" required>
+				<input id="checkBox" type="checkbox" formControlName="autolocate" name="autolocate" (change)="clear_locate()">
+				<label for="checkBox" style="color:white;">Auto-Detection Location</label>
+			</div>
+		</div>
+
+		<div class="row" style="padding-top: 15px;">
+			<div class="container" style="text-align: center;">
+				<button class="btn btn-default" style="background:#FF3358;margin-right: 2%; color:white" type="submit" name="search">SUBMIT</button>
+				<button class="btn btn-default" style="background:#0066FF;margin-left: 2%; color:white" type="button" (click)="clean_all()">CLEAR</button>
+			</div>
+		</div>
+
+	</div>
+	</form>
+	</div>
+</div>
+<app-resultlist *ngIf="TableFlag" [ResultData]="Result_data" > </app-resultlist>

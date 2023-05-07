@@ -1,0 +1,34 @@
+<div *ngIf="!DetailFlag" class="container" style="margin-top:100px auto 100px auto;">
+	<div *ngIf="NoFlag" class="no_result">
+		<h3 style="color:red;">No results available</h3>
+	</div>
+    <div *ngIf="!NoFlag" class="results_card">
+    <table class="search_table table table-striped table-responsive-md">
+		<thead>
+            <tr>
+                <th scope="col">Data/Time</th>
+                <th scope="col">Icon</th>
+                <th scope="col">Event</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Venue</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let number of ResultArray;let i = index " [attr.data-index]="i" (click)="show_detail(i)" class="item">
+                <ng-container>
+                        <td>
+                            <p>{{ResultArray[i].dates.start.localDate}}</p>
+                            <p *ngIf="'localTime' in ResultArray[i].dates.start">{{ResultArray[i].dates.start.localTime}}</p>
+                        </td>
+                        <td><img class="icon" src="{{ResultArray[i].images[0].url}}"></td>
+                        <td>{{ResultArray[i].name}}</td>
+                        <td>{{ResultArray[i].classifications[0].segment.name}}</td>
+                        <td>{{ResultArray[i]._embedded.venues[0].name}}</td>
+                </ng-container>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+
+<app-detailcard *ngIf="DetailFlag" [EventInfo]="Event_data" [VenueInfo]="Venue_data" (close_signal)="DetailFlag=false"></app-detailcard>

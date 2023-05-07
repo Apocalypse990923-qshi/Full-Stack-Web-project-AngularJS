@@ -1,0 +1,26 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/*@import "@angular/material/prebuilt-themes/deeppurple-amber.css";*/
+/*@import "@angular/material/prebuilt-themes/pink-bluegrey.css";*/
+/*@import "@angular/material/prebuilt-themes/purple-green.css";*/
+body{
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.no_result {
+	color: red;
+	font-size: 15pt;
+	border-radius:15px;
+	background-color:white;
+	text-align:center;
+}

@@ -1,0 +1,102 @@
+div.event_card {
+	background-color: rgba(150, 150, 150, 0.4);
+	-webkit-backdrop-filter: blur(5px);
+ 	backdrop-filter: blur(5px);
+	color: white;
+}
+img.seatmap {
+	width: 350px;
+    height: 350px;
+}
+.info_table {
+	margin: auto;
+	text-align: center;
+}
+.info_title {
+	font-size: 16pt;
+	height: 25px;
+	text-align: center;
+	color: #AAFFEE;
+}
+.info_data {
+	font-size: 12pt;
+	height: 35px;
+	text-align: center;
+	color: white;
+}
+div.status{
+	width: auto;
+	display:inline-block;
+	padding: 5px;
+	border-radius:5px;
+}
+.btn-circle {
+  background-color:white;
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+.fa-twitter {
+    color: #55ACEE;
+}
+.fa-twitter:hover {
+	-webkit-filter: brightness(80%);
+}
+.fa-spotify {
+    color: #00d13f;
+}
+.fa{
+    text-align:center;
+    text-decoration: none;
+}
+img.musician_pic {
+	width: 150px;
+    height: 150px;
+}
+img.album_pic {
+	width: 200px;
+    height: 200px;
+}
+.carousel-control-next, .carousel-control-prev{
+	width: 20px;
+}
+.musician_info {
+	font-size: 15pt;
+	color: #AAFFEE;
+}
+.mat-mdc-tab-group.mat-background-accent, .mat-mdc-tab-nav-bar.mat-background-accent {
+    --mat-mdc-tab-header-with-background-background-color: #69f0ae;
+    --mat-mdc-tab-header-with-background-foreground-color: #fff;
+}
+.mat-mdc-progress-spinner {
+    --mdc-circular-progress-active-indicator-color: #dc3545;
+}
+.custom-tab-label {
+  min-width: 40px; /* 设置你想要的宽度 */
+  /*width: 40px;*/
+  text-align: center; /* 可选：设置文本居中 */
+}
+.spinner-container {
+  position: relative;
+  display: inline-block;
+}
+.spinner-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.text-container {
+  overflow: hidden;
+}
+.truncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
